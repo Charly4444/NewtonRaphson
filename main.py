@@ -27,7 +27,7 @@ def NR_mtd(x_old: float, error_min: float, iter_max: int =100):
 
     while (iter <= iter_max) and (er > error_min) and (count1 <= 5) and (count2 <= 5) and (divchek <= 4):
 
-        # EVALUATING f(x) IN A TRY-CATCH
+        # EVALUATING f(x) IN A TRY-EXCEPT
         try:
             fx = 2*(x**2)+2*x-5             #INPUT YOUR f(x) HERE
             # fx = round(((x ** 3) - (16 * np.real(((x + 1) ** (1 / 3)))) - 8), 3)
@@ -37,7 +37,7 @@ def NR_mtd(x_old: float, error_min: float, iter_max: int =100):
             count1 += 1
             fx = "null"
 
-        # EVALUATING f'(X) IN A TRY-CATCH
+        # EVALUATING f'(X) IN A TRY-EXCEPT
         try:
             f_primex = 4*x+2                #INPUT YOUR f_Prime(x) HERE
             # f_primex = round(((2 * x) - (16 / (3 * np.real(((x + 1) ** (2 / 3)))))), 3)
